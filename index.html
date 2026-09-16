@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting to job posting...</title>
+</head>
+
 <body onload="document.getElementById('f').submit()">
-<form name="callRefreshLanguage" action="/pls/ucdrecruit/ecore_utility_package.swap_languages" method="post">
-<input type="hidden" name="p_display_in_irish" value="N">
-<input type="hidden" name="p_url" value="erq_jobspec_version_4.display_form">
-<input type="hidden" name="p_url_method" value="ERECRUIT">
-<input type="hidden" name="p_field_name" value="p_company">
-<input type="hidden" name="p_field_value" value="1">
-<input type="hidden" name="p_field_name" value="p_internal_external">
-<input type="hidden" name="p_field_value" value="E">
-<input type="hidden" name="p_field_name" value="p_process_type">
-<input type="hidden" name="p_field_value" value="">
-<input type="hidden" name="p_field_name" value="p_recruitment_id">
-<input type="hidden" name="p_field_value" value="020054">
-<input type="hidden" name="p_field_name" value="p_applicant_no">
-<input type="hidden" name="p_field_value" value="">
-<input type="hidden" name="p_field_name" value="p_form_profile_detail">
-<input type="hidden" name="p_field_value" value="">
-<input type="hidden" name="p_field_name" value="p_display_apply_ind">
-<input type="hidden" name="p_field_value" value="Y">
-</form>
+  <p>Redirecting to the job posting. If you are not redirected automatically, please click the button below.</p>
+
+  <form id="f" method="POST"
+        action="https://my.corehr.com/pls/ucdrecruit/erq_job_package.navigate_to_job">
+    <input type="hidden" name="p_company" value="1">
+    <input type="hidden" name="p_internal_external" value="E">
+    <input type="hidden" name="p_display_in_irish" value="N">
+    <input type="hidden" name="p_applicant_no" value="">
+    <input type="hidden" name="p_recruitment_id" value="020054">
+
+    <button type="submit">Open job posting</button>
+  </form>
 </body>
 </html>
